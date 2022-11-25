@@ -10,9 +10,9 @@ import java.util.Date;
  */
 public abstract class Mammal implements Animal {
     private final Integer id;
-    private ArrayList<Food> eatenMeals;
-    private String name;
-    private Date birthDate;
+    private static ArrayList<Food> eatenMeals;
+    private static String name;
+    private static Date birthDate;
 
     public Mammal(String name, Date birthDate, Integer id) {
         this.name = name;
@@ -21,15 +21,15 @@ public abstract class Mammal implements Animal {
         this.id = id;
     }
 
-    public String getName() {
+    public static String getName() {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public static void setName(String name) {
+        Mammal.name = name;
     }
 
-    public Date getBirthDate() {
+    public static Date getBirthDate() {
         return birthDate;
     }
 
